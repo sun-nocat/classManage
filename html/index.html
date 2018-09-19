@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../javascript/vue.js"></script>
+    <script src="../javascript/axios-0.19.0-beta.1/dist/axios.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{msg}}</p>
+        <!-- <p v-for="i in data"></p> -->
+    </div>
+
+    <script>
+
+        let app = new Vue({
+            el:'#app',
+            data:{
+                msg:'hello'
+            },
+            created() {
+                // let axios = new axios()?
+                axios.post('http://118.126.110.182:8006/api/getOperaList')
+                .then((res) => {
+                    console.log(res)
+                    this.msg = res.data.msg
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+
+
+            },
+            
+        })
+    
+    
+    </script>
+    
+</body>
+</html>
