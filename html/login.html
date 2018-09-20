@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../javascript/vue.js"></script>
+    <script src="../javascript/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.css">
+    <style>
+
+
+        .center {
+            position: absolute;
+            background-color: aqua;
+            top: 25%;
+            left: 25%;
+            width: 400px;
+            height: 400px;
+        }
+
+        #login{
+            margin-top: 20px;
+            /* background-color: aqua; */
+            /* border: solid 1px black; */
+            background-color: #FFF;
+            border: 1px solid #ddd;
+            margin-top: 50px;
+            border-radius: 5px;
+            height: 300px;;
+        }
+
+        #title {
+            text-align: center;
+            /* background-color: cornflowerblue; */
+            /* border-bottom: solid 2px #DDDDD9; */
+            box-shadow: rgba(0,0,0,.1)0 1px 5px;
+        }
+        #header{
+            text-align: center;
+        }
+        #button{
+
+            margin-top: 70px;
+            height: 1px;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" id="title">
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-2">
+                <h3>班级管理系统</h3>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4" id="login">
+                <form class="form-signin" action="/" method="POST">
+                    <h2 class="form-signin-heading" id="header">用户登录</h2>
+                    <!-- <label for="inputEmail" class="sr-only">账号</label> -->
+                    <input type="text" id="inputEmail" class="form-control" placeholder="用户名" required autofocus style="margin: 5px;">
+                    <!-- <label for="inputPassword" class="sr-only">密码</label> -->
+                    <input type="password" id="inputPassword" class="form-control" placeholder="密码" required style="margin: 5px;">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="remember-me">保持登陆
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin: 5px;">登录</button>
+                </form>
+
+            </div>
+            <div class="col-lg-4"></div>
+
+        </div>
+
+        <div class="row" id="button">
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
