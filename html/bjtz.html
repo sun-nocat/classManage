@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../javascript/vue.js"></script>
+    <script src="../javascript/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.css">
+    <script src="../javascript/bootstrap/js/bootstrap.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    
+    <div class="container-fluid" style="margin: 0px; padding: 0px;">
+        <div class="row" id="title" style="text-align: center; box-shadow: rgba(0, 0, 0, .1)0 1px 5px; background-color: rgba(34, 177, 76)">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <h3>班级通知</h3>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2">
+
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                添加班级通知
+            </button>
+        </div>
+    </div>
+
+    <!-- 输入表单 -->
+    <div class="container">
+        <div class="row">
+            <div class="collapse" id="collapseExample">
+                <div class="well">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">标题</span>
+                        <input type="text" class="form-control" placeholder="标题" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon2">内容</span>
+                        <textarea name="" class="form-control" id="" cols="30" rows="10" placeholder="内容"
+                            aria-describedby="basic-addon1"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-default">发布</button>
+                </div>
+            </div>
+        </div>
+        <!-- 展示班级通知 -->
+        <div class="row">
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Success!</strong> 明天交英语作业
+            </div>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Warning!</strong> 明天交英语作业
+            </div>
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Warning!</strong> 明天交英语作业
+            </div>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Warning!</strong> 明天交英语作业
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
