@@ -65,23 +65,23 @@
 
 
     <div class="container">
-
         <div class="row">
-
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="login">
                 <form class="form-signin" action="/" method="POST">
                     <h2 class="form-signin-heading" id="header">用户登录</h2>
-                    <!-- <label for="inputEmail" class="sr-only">账号</label> -->
-                    <input type="text" id="inputEmail" class="form-control" placeholder="用户名" required autofocus style="margin: 5px;">
-                    <!-- <label for="inputPassword" class="sr-only">密码</label> -->
-                    <input type="password" id="inputPassword" class="form-control" placeholder="密码" required style="margin: 5px;">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me">保持登陆
-                        </label>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin: 5px;">登录</button>
+                    <label id="inputUserName1"></label>
+                    <input type="text" id="inputUserName" class="form-control" placeholder="输入6位学号" required style="margin: 5px;">
+                    <laber>
+                        <label id="inputPassword1"></label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="密码" required style="margin: 5px;">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me">保持登陆
+                            </label>
+                        </div>
+                        <button  id="btn"
+                            class="btn btn-lg btn-primary btn-block" onclick="check()" type="button" style="margin: 5px;">登录</button>
                 </form>
 
             </div>
@@ -97,6 +97,65 @@
     </div>
 
 
+    <script>
+        function check() {
+            var inputUserName = $('#inputUserName').val()
+            var inputPassword = $('#inputPassword').val()
+            console.log(inputUserName)
+            console.log(inputPassword)
+            var reg1 = /^[0-9]{6}$/;
+            var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,16}$/;
+            if (!reg1.test(inputUserName)) {
+
+                $('#inputUserName1').text('请输入6位学号')
+            } else {
+
+                $('#inputUserName1').text('')
+                if (!reg2.test(inputPassword)) {
+                    $('#inputPassword1').text('请输入数字，大小写等')
+                } else {
+                    $('#inputPassword1').text('')
+                    window.location.href='index.html'
+                    return true;
+                }
+            }
+
+
+
+
+
+
+        }
+
+        // function checkInputUserName() {
+        //     var reg = /^[0-9]{6}$/;
+        //     var inputUserName = $('#inputUserName').val()
+        //     console.log(inputUserName)
+        //     if (!reg.test(inputUserName)) {
+        //         var s = document.querySelector('#inputUserName');
+        //         s.setCustomValidity('请输入6为学号')
+        //         s.focus();
+        //         return false;
+        //     } else {
+        //         // var s = document.querySelector('#inputUserName');
+        //         // s.setCustomValidity('正确')
+        //         return true;
+        //     }
+        // }
+
+        // function checkInputPassword() {
+        //     var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,16}$/;
+        //     var inputPassword = $('#inputPassword').val()
+        //     console.log(inputPassword)
+        //     if (!reg.test(inputPassword)) {
+        //         var a = document.querySelector('#inputPassword');
+        //         a.setCustomValidity('请输入6为学号')
+        //     } else {
+        //         // var a = document.querySelector('#inputPassword');
+        //         // a.setCustomValidity('正确')
+        //     }
+        // }
+    </script>
 
 
 
